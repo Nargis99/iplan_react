@@ -1,0 +1,308 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: gainsboro/*#f5f5f5*/;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Make sure it stretches to full width */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 2px solid #e0e0e0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.logo {
+  height: 30px;
+}
+
+.username {
+  position: absolute;
+  top: 30px; /* Adjust this value to place the username vertically */
+  right: 50px; /* Adjust this value to place the username horizontally */
+  font-size: 1em;
+  color: #0078d7;
+  font-weight: bold;
+}
+
+.iplan {
+  font-size: 2.0em; /* Adjust the font size as needed */
+  color: #0047AB/*#0078d7*/;
+  text-align: center;
+  width: 100%; /* Adjust the width to take up the full container or set a specific width */
+  max-width: 600px; /* Ensure the width is fixed and doesn't stretch beyond 600px */
+  margin: 0 auto 0 200px; /* Centers the header horizontally */
+
+}
+
+.image-text-container::before {
+  content: '';
+  display: inline-block;
+  width: 30px; /* Adjust width of image */
+  height: 30px; /* Adjust height of image */
+  background-image: url('https://raw.githubusercontent.com/Nargis99/Azure_iplan/main/image%20(2).jpg');
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px; /* Space between image and text */
+}
+
+.content {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.hamburger-icon div {
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Sidebar menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 200px;
+  height: 100%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+.side-menu.open {
+  left: 0; /* Slide in the menu */
+}
+
+/* Menu links */
+.side-menu a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+.side-menu a:hover {
+  background-color: #005f8c;
+}
+
+/* containers*/
+
+.card {
+  background-color: white/*#eaf4fc*/;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 0 0 15px 0;
+  color: black; /*#0078d7*/
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.review-btn, .dropdown-btn, .view-btn {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-btn button:hover{
+  background-color: seagreen;
+}
+
+.status-bar {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.green-bar {
+  background-color: #28a745;
+  height: 100%;
+}
+
+.red-bar {
+  background-color: #dc3545;
+  height: 100%;
+}
+
+.actions button {
+  margin-right: 10px;
+  padding: 5px 15px;
+  background-color: #A6A5A5/*#0078d7*/;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .card {
+  background-color: #f1f5f8;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+} */
+
+.column-headings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.heading {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.project-name p {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.resource-allocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.status-bar {
+  display: flex;
+  width: 200px;
+  height: 15px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.green-bar {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+}
+
+.red-bar {
+  background-color: #f44336;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+}
+
+.percentage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.overallocated-hours {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resources {
+  text-align: right;
+}
+
+.view-btn {
+  background-color: #0078d7;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background-color: seagreen;
+}
+
+.actions button {
+  background-color: #A6A5A5/*#2196f3*/;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.review-btn button:hover{
+  background-color: SeaGreen
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions button:hover {
+  background-color: SeaGreen/*#1976d2*/;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.right-align-btn {
+  margin: 10px;
+  /* margin-left: auto; Push the button to the right */
+}
