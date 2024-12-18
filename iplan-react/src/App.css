@@ -124,6 +124,7 @@ body {
 
 table {
   width: 100%;
+  table-layout: fixed; /*added*/
   border-collapse: collapse;
   margin-bottom: 15px;
 }
@@ -132,6 +133,7 @@ th, td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  border: 1px solid transparent;
 }
 
 .review-btn, .dropdown-btn, .view-btn {
@@ -305,4 +307,57 @@ h2 {
 .right-align-btn {
   margin: 10px;
   /* margin-left: auto; Push the button to the right */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General table cell style */
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid transparent;
+  word-wrap: break-word; /* Wrap text if content is too large */
+  overflow-wrap: break-word; /* Alternative for better browser compatibility */
+}
+
+/* Header Style */
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+  border: 1px solid transparent;
+}
+
+/* Wrap table in a scrollable container */
+.table-container {
+  max-height: 400px; /* Set the desired height for the scrollable window */
+  overflow-y: auto;  /*Enable vertical scrolling when needed */
+  border: 1px solid #ccc; /* Optional: Add a light border to the scrollable container */
+}
+
+/* Optional: Add visual separation only if necessary with a lighter style */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+/* Prevent global scrolling for the entire page */
+body {
+  overflow: hidden;
 }
